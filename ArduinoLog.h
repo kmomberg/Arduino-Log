@@ -5,7 +5,7 @@
  /_/ \_\_|_\___/ \___/|___|_|\_|\___/|____\___/ \___|
 
   Log library for Arduino
-  version 1.1.2
+  version 1.1.3
   https://github.com/thijse/Arduino-Log
 
 Licensed under the MIT License <http://opensource.org/licenses/MIT>.
@@ -347,7 +347,6 @@ private:
 			level = LOG_LEVEL_SILENT;
 		}
 			
-
 		if (_prefix != NULL)
 		{
 			_prefix(_logOutput, level);
@@ -371,6 +370,8 @@ private:
 		{
 		    _logOutput->print(CR);
 		}
+
+		va_end(args);
 #endif
 	}
 
